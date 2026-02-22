@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title> Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>Calculator</h1>
+            <p class="tag">PC & Mobile • Basic, Matrices, Quadratic</p>
+        </header>
+
+        <section class="panel">
+            <nav class="modes">
+                <button class="mode-btn active" data-mode="basic">Basic</button>
+                <button class="mode-btn" data-mode="matrix">Matrix</button>
+                <button class="mode-btn" data-mode="quad">Quadratic</button>
+            </nav>
+
+            <div class="mode" id="basic">
+                <div class="display" id="display">0</div>
+                <div class="keys">
+                    <button class="key wide" data-action="clear">C</button>
+                    <button class="key" data-action="back">⌫</button>
+                    <button class="key" data-action="op">÷</button>
+
+                    <button class="key" data-digit="7">7</button>
+                    <button class="key" data-digit="8">8</button>
+                    <button class="key" data-digit="9">9</button>
+                    <button class="key" data-action="op">×</button>
+
+                    <button class="key" data-digit="4">4</button>
+                    <button class="key" data-digit="5">5</button>
+                    <button class="key" data-digit="6">6</button>
+                    <button class="key" data-action="op">-</button>
+
+                    <button class="key" data-digit="1">1</button>
+                    <button class="key" data-digit="2">2</button>
+                    <button class="key" data-digit="3">3</button>
+                    <button class="key" data-action="op">+</button>
+
+                    <button class="key" data-digit="0">0</button>
+                    <button class="key" data-digit=".">.</button>
+                    <button class="key equals" data-action="equals">=</button>
+                </div>
+            </div>
+
+            <div class="mode hidden" id="matrix">
+                <div class="matrix-grid">
+                    <div>
+                        <label>A (rows x cols, entries separated by commas)</label>
+                        <textarea id="matA" placeholder="e.g. 1,2\n3,4"></textarea>
+                    </div>
+                    <div>
+                        <label>B (rows x cols)</label>
+                        <textarea id="matB" placeholder="e.g. 5,6\n7,8"></textarea>
+                    </div>
+                </div>
+                <div class="matrix-controls">
+                    <button id="matAdd">A + B</button>
+                    <button id="matMul">A × B</button>
+                    <button id="matClear">Clear</button>
+                </div>
+                <div class="matrix-result" id="matResult"></div>
+            </div>
+
+            <div class="mode hidden" id="quad">
+                <div class="quad-grid">
+                    <label>a <input id="qa" type="number" step="any" placeholder="a"></label>
+                    <label>b <input id="qb" type="number" step="any" placeholder="b"></label>
+                    <label>c <input id="qc" type="number" step="any" placeholder="c"></label>
+                </div>
+                <div class="quad-controls">
+                    <button id="solveQuad">Solve</button>
+                    <button id="clearQuad">Clear</button>
+                </div>
+                <div class="quad-result" id="quadResult"></div>
+            </div>
+        </section>
+
+        <footer class="footer">© 2026 by Your Name | Professional Calculator</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
