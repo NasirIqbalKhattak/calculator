@@ -18,6 +18,29 @@ body{
   justify-content:center;
   padding:24px;
 }
+
+/* Branding */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand-img{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.15);
+}
+.brand-text h1{
+  margin:0;
+  font-size:1.1rem;
+}
+.brand-text .tag{
+  margin:0;
+  font-size:0.8rem;
+  color:#6b7280;
+}
 .app{
   width:100%;
   max-width:920px;
