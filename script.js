@@ -74,7 +74,7 @@ function matAdd(A,B){
 
 function matMul(A,B){
   const [r1,c1]=dims(A); const [r2,c2]=dims(B);
-  if(c1!==r2) throw new Error('Inner dimensions must match');
+  if(c1!==r2) throw new Error('no of columns in A must match no of rows in B');
   const R = Array.from({length:r1},()=>Array.from({length:c2},()=>0));
   for(let i=0;i<r1;i++) for(let k=0;k<c1;k++) for(let j=0;j<c2;j++) R[i][j]+=A[i][k]*B[k][j];
   return R;
